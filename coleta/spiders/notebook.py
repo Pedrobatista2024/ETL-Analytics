@@ -25,16 +25,12 @@ class NotebooksSpider(scrapy.Spider):
         for p in produtos:
             # Nome
             nome = p.css("a.poly-component__title::text")\
-                    .get(default="").strip()
+                    .get(default="não encontrado").strip()
 
-            # Marca
-            marca_raw = p.css("span.poly-component__seller::text")\
-                         .get(default="").strip()
-            marca = marca_raw.replace("Por ", "") or "—"
-
+            
             # Vendedor
             vendedor = p.css("span.poly-component__seller::text")\
-                        .get(default="").strip()
+                        .get(default="não encontrado").strip()
 
             # Reviews
             reviews_rating = p.css("span.poly-reviews__rating::text")\
@@ -71,9 +67,7 @@ class NotebooksSpider(scrapy.Spider):
                     preco_atual = "—"
 
             yield {
-                "pagina":        page,
                 "nome":          f"Nome: {nome}",
-                "marca":         f"Marca: {marca}",
                 "vendedor":      f"Vendedor: {vendedor}",
                 "reviews":       f"Avaliação: {reviews_rating} ({reviews_amount} reviews)",
                 "preco_antigo":  f"Preço antigo: {preco_antigo}",
