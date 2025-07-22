@@ -61,7 +61,7 @@ def remover_prefixo(texto, prefixo):
              Retorna a string original (com strip e sem :) se o prefixo não for encontrado.
     """
     if not isinstance(texto, str):
-        return ""
+        return None
     
     # Remove o prefixo
     if texto.strip().startswith(prefixo):
@@ -78,16 +78,16 @@ def processar_preco(preco_str):
     Retorna float, ou 'Preço não encontrado' se for um traço ou inviável.
     """ 
     if not isinstance(preco_str, str):
-        return "Preço não encontrado"
+        return None 
         
     preco_limpo_temp = preco_str.replace("R$", "").replace(" ", "").strip()
 
     if preco_limpo_temp == "—" or not preco_limpo_temp:
-        return "Preço não encontrado"
+        return None
 
     match_numero = re.search(r'[\d\.,]+', preco_limpo_temp)
     if not match_numero:
-        return "Preço não encontrado"
+        return None
     
     numero_bruto = match_numero.group(0)
     
@@ -105,7 +105,7 @@ def processar_preco(preco_str):
         return float(preco_limpo_final)
     except ValueError:
         print(f"ERRO CRÍTICO: Impossível converter '{preco_limpo_final}' (original: '{preco_str}') para float. Provável formato inesperado.")
-        return "Preço não encontrado"
+        return None
 
 def processar_reviews(reviews_str):
     """
@@ -116,10 +116,10 @@ def processar_reviews(reviews_str):
     reviews = None
 
     if not isinstance(reviews_str, str):
-        return "Avaliação não encontrada", "reviews não encontrados"
+        return None, None
 
     if reviews_str.strip() == "Avaliação: — (— reviews)" or not reviews_str.strip():
-        return "Avaliação não encontrada", "reviews não encontrados"
+        return None, None
 
     match_avaliacao = re.search(r'(\d+\.\d+)', reviews_str)
     if match_avaliacao:
@@ -135,8 +135,8 @@ def processar_reviews(reviews_str):
         except ValueError:
             pass
 
-    return (avaliacao if avaliacao is not None else "Avaliação não encontrada",
-            reviews if reviews is not None else "reviews não encontrados")
+    return (avaliacao if avaliacao else None,
+            reviews if reviews else None)
 
 # --- 3. Função Principal de Transformação de um Único Item ---
 def transformar_item_notebook(item_original):
@@ -151,7 +151,7 @@ def transformar_item_notebook(item_original):
 
     # --- LÓGICA CORRIGIDA PARA O TRATAMENTO DO VENDEDOR ---
     vendedor_original = item_original.get('vendedor', '').strip() # Pega e limpa a string original
-    vendedor_final = "Vendedor não encontrado" # Valor padrão caso nada seja encontrado
+    vendedor_final = None # Valor padrão caso nada seja encontrado
 
     # Tenta extrair com o prefixo mais específico "Vendedor: Por "
     if vendedor_original.startswith("Vendedor: Por "):
@@ -233,7 +233,7 @@ if __name__ == "__main__":
 
     #caminho_arquivo_saida_json = 'dados_notebooks_transformados_sem_pagina.json'
     # OPCIONAL: Defina o caminho para o arquivo de saída CSV (descomente para usar)
-    caminho_arquivo_saida_csv = 'dados_notebooks_transformados_sem_pagina.csv'
+    caminho_arquivo_saida_csv = 'dados_teste_null.csv'
 
     print(f"Iniciando o processo de transformação de dados para notebooks do Mercado Livre...")
     print(f"Carregando dados...")
