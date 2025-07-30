@@ -45,8 +45,8 @@ def converter_delimitador_csv(caminho_entrada, caminho_saida):
 
 # --- Exemplo de Uso (igual ao anterior) ---
 if __name__ == "__main__":
-    CAMINHO_DO_SEU_CSV_ORIGINAL = r"C:\Users\estudante\Desktop\Pedro\projetos\coleta\coleta\dados_teste_null.csv"
-    CAMINHO_DO_NOVO_CSV_CORRIGIDO = r"C:\Users\estudante\Desktop\Pedro\projetos\coleta\coleta\data_teste_null_corrigido.csv"
+    CAMINHO_DO_SEU_CSV_ORIGINAL = r"C:\Users\estudante\Desktop\Pedro\projetos\coleta\coleta\dados_tratados.csv"
+    CAMINHO_DO_NOVO_CSV_CORRIGIDO = r"C:\Users\estudante\Desktop\Pedro\projetos\coleta\coleta\dados_tratados_ponto_e_virgula.csv"
     
     converter_delimitador_csv(CAMINHO_DO_SEU_CSV_ORIGINAL, CAMINHO_DO_NOVO_CSV_CORRIGIDO)
 
