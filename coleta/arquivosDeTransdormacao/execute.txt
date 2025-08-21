@@ -1,0 +1,17 @@
+passo 1: ativar o ambiente virtual
+
+passo 2: executar o codigo notebook.py atraves do comando (scrapy crawl notebook -o data.json ou data.csv)
+        voce ira gerar o Arquivo1
+
+passo 3: transformar o Arquivo1 no (transformacao.py)
+        voce ira gerar o Arquivo2
+
+passo 4: transforme o Arquivo2 no (trocandodelimiter.py)
+        voce ira gerar o Arquivo3
+
+passo 5:transformar o Arquivo3 no (transformacao2.py)
+        voce ira gerar o Arquivo4
+
+passo 5: transforme o Arquivo4 no (trocandodelimiter.py)
+        voce ira gerar o Arquivo5
+

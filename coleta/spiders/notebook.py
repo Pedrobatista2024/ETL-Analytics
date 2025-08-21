@@ -4,7 +4,7 @@ class NotebooksSpider(scrapy.Spider):
     name = "notebook"
     allowed_domains = ["mercadolivre.com.br"]
     base_url = "https://lista.mercadolivre.com.br/notebooks"
-    max_pages = 10
+    max_pages = 40
 
     def start_requests(self):
         yield scrapy.Request(
@@ -86,3 +86,5 @@ class NotebooksSpider(scrapy.Spider):
             )
         else:
             self.logger.info(f"✅ Limite de {self.max_pages} páginas atingido.")
+
+

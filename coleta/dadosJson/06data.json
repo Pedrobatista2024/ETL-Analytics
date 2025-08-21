@@ -1,18 +1,6 @@
 [
-{
-"nome": "Nome: Notebook Dell Latitude 3490 Core I7 8a Ger 8gb Ssd 240gb 14", 
-"vendedor": "Vendedor: não encontrado", 
-"reviews": "Avaliação: — (— reviews)", 
-"preco_antigo": "Preço antigo: R$1.799", 
-"preco_atual": "Preço atual: R$1.709"
-},
-{
-"nome": "Nome: Notebook Lenovo Ideapad 1 Intel Core i3 1215U 8GB RAM 256GB SSD Windows 11 Home Tela 15,6\" 82VY000SBR", 
-"vendedor": "Vendedor: Por Vikings", 
-"reviews": "Avaliação: 4.8 (5415 reviews)", 
-"preco_antigo": "Preço antigo: R$3.998", 
-"preco_atual": "Preço atual: R$2.354"
-},
+{"nome": "Nome: Notebook Dell Latitude 3490 Core I7 8a Ger 8gb Ssd 240gb 14", "vendedor": "Vendedor: não encontrado", "reviews": "Avaliação: — (— reviews)", "preco_antigo": "Preço antigo: R$1.799", "preco_atual": "Preço atual: R$1.709"},
+{"nome": "Nome: Notebook Lenovo Ideapad 1 Intel Core i3 1215U 8GB RAM 256GB SSD Windows 11 Home Tela 15,6\" 82VY000SBR", "vendedor": "Vendedor: Por Vikings", "reviews": "Avaliação: 4.8 (5415 reviews)", "preco_antigo": "Preço antigo: R$3.998", "preco_atual": "Preço atual: R$2.354"},
 {"nome": "Nome: Notebook ASUS Vivobook Go E1504GA Intel Core i3 N305 8GB Ram 512GB SSD Windows 11 Tela 15,6\" FHD Silver - NJ435W", "vendedor": "Vendedor: Por Asus", "reviews": "Avaliação: 4.9 (708 reviews)", "preco_antigo": "Preço antigo: R$3.199", "preco_atual": "Preço atual: R$2.389"},
 {"nome": "Nome: Notebook VAIO FE15 Intel Core i5 12th 16GB 512GB SSD Tela 15,6'' Full HD Antirreflexo Windows 11 Home Cinza Grafite B2621H", "vendedor": "Vendedor: Por INPOWER", "reviews": "Avaliação: 4.8 (689 reviews)", "preco_antigo": "Preço antigo: R$4.599", "preco_atual": "Preço atual: R$3.817"},
 {"nome": "Nome: Notebook Acer Aspire 15 A15-51M-56KR / Intel® Core™ i5-13420H 13ª geração / 16 GB / 512SSD / 15.6” Full HD", "vendedor": "Vendedor: Por Vikings", "reviews": "Avaliação: 4.8 (481 reviews)", "preco_antigo": "Preço antigo: —", "preco_atual": "Preço atual: R$4.855"},

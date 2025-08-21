@@ -3,7 +3,7 @@ import re   # Módulo para expressões regulares (Regex), excelente para encontr
 import csv  # Módulo para trabalhar com arquivos CSV (caso precise)
 
 caminhoJson = r"C:\Users\estudante\Desktop\Pedro\projetos\coleta\coleta\data.json" # Seu caminho para o arquivo JSON
-caminhoCsv = r"C:\Users\estudante\Desktop\Pedro\projetos\coleta\coleta\data.csv"  # Seu caminho para o arquivo CSV
+caminhoCsv = r"C:\Users\estudante\Desktop\Pedro\projetos\etl_analytics\coleta\coleta\dadosScrapy.csv"  # Seu caminho para o arquivo CSV
 
 # --- 1. Funções de Carregamento de Dados ---
 def carregar_dados_json(caminho_arquivo):
@@ -229,12 +229,11 @@ if __name__ == "__main__":
     #caminho_arquivo_entrada_json = caminhoJson
     
     # OPCIONAL: Defina o caminho para o seu arquivo de entrada CSV (descomente para usar)
-    caminho_arquivo_entrada_csv = caminhoCsv
+    caminho_arquivo_entrada_csv = caminhoCsv 
 
     #caminho_arquivo_saida_json = 'dados_notebooks_transformados_sem_pagina.json'
     # OPCIONAL: Defina o caminho para o arquivo de saída CSV (descomente para usar)
-    caminho_arquivo_saida_csv = 'dados_teste_null.csv'
-
+    caminho_arquivo_saida_csv = r"C:\Users\estudante\Desktop\Pedro\projetos\etl_analytics\coleta\coleta\dadosScrapytrans01.csv"
     print(f"Iniciando o processo de transformação de dados para notebooks do Mercado Livre...")
     print(f"Carregando dados...")
 
