@@ -28,7 +28,7 @@ pd.set_option('display.max_columns', None)
 #                                    rot=100,
 #                                    figsize=(10,8))
 #plt.show()
-#
+
 # Analise 02: QUAL A RELAÇÃO ENTRE AVALIAÇÃO E O NUMERO DE REVIEWS:
 
 #fig = dados_ecomerce.plot(kind='scatter',
